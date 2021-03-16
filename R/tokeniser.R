@@ -44,6 +44,23 @@ pos_tag <- function(tokens, to_r = FALSE) {
   return(pos)
 }
 
+#' Wordnet Morphy
+#'
+#' Wordnet Morphy
+#' 
+#' @param str the string to process
+#' 
+#' @examples
+#' \dontrun{
+#' morphed <- morphy(word)
+#' }
+#' 
+#' @export
+morphy <- function(str) {
+  assert_that(!missing(str), msg = "Missing `str`")
+  return(nltk$wordnet$morphy(str))
+}
+
 #' Named Entity Extraction
 #'
 #' Named Entity Extraction
