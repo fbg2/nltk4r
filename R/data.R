@@ -323,7 +323,7 @@ movie_reviews_words <- function(..., to_r = FALSE){
 
 #' @rdname movie_reviews
 #' @export
-movie_reviews_categories <- function(..., = NULL, to_r = FALSE){
+movie_reviews_categories <- function(..., to_r = FALSE){
   cats <- nltk$corpus$movie_reviews$categories(file)
   if(to_r)
     cats <- reticulate::py_to_r(cats)
