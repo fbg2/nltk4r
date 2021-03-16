@@ -58,7 +58,7 @@ pos_tag <- function(tokens, to_r = FALSE) {
 #' @export
 morphy <- function(str) {
   assert_that(!missing(str), msg = "Missing `str`")
-  return(nltk$wordnet$morphy(str))
+  return(nltk$corpus$wordnet$morphy(str))
 }
 
 #' Named Entity Extraction
